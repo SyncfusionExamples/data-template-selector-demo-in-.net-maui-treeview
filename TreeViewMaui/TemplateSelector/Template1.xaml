@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ViewCell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TreeViewMaui.TemplateSelector.Template1">
+    
+    <ViewCell.View>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="40"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="100"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Padding="5,5,5,5">
+                <Image Source="{Binding Content.ImageIcon}" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="24" WidthRequest="24" />
+            </Grid>
+            <Grid Grid.Column="1" VerticalOptions="Center">
+                <Label Text="{Binding Content.ItemName}" VerticalTextAlignment="Center"/>
+            </Grid>
+            <Grid Grid.Column="2" VerticalOptions="Center" Padding="0,0,10,0">
+                <Label LineBreakMode="NoWrap" Text="{Binding ., Converter={StaticResource FileCountConverter}}" VerticalTextAlignment="Center" HorizontalTextAlignment="End" />
+            </Grid>
+        </Grid>
+    </ViewCell.View>
+</ViewCell>
