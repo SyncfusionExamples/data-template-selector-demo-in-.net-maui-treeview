@@ -1,6 +1,6 @@
 namespace TreeViewMaui.TemplateSelector;
 
-public partial class Template2 : ViewCell
+public partial class Template2 : Grid
 {
 	public Template2()
 	{
